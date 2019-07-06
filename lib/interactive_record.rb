@@ -38,6 +38,7 @@ class InteractiveRecord
     table_info.each do |col|
       columns << col["name"]
     end
+    pry 
   end
 
 
