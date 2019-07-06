@@ -33,7 +33,7 @@ class InteractiveRecord
     binding.pry
     table_name=self.table_name_for_insert
     DB[:conn].results_as_hash = true
-    sql = "PRAGMA index_info('#{table_name}');"
+    sql = "PRAGMA index_info(#{table_name});"
     table_info=DB[:conn].execute(sql)
     columns=[]
     table_info.each do |col|
