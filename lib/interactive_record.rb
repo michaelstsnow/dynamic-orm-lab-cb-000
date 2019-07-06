@@ -38,7 +38,7 @@ class InteractiveRecord
     # column_names=self.col_names_for_insert.split(", ")
     # values=[]
     # for column_names.each do |col|
-    #  values << self.send("#{col}")
+    #  values << self.send("#{col}").to_s
     # end
     # values.join(", ")
   end
