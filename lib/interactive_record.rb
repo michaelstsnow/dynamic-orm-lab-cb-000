@@ -34,6 +34,7 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
     sql = "PRAGMA index_info('#{table_name}')"
     table_info=DB[:conn].execute(sql)
+    columns=[]
   end
 
 
