@@ -38,7 +38,7 @@ class InteractiveRecord
     table_info.each do |col|
       columns << col["name"]
     end
-    columns
+    columns.join[","]
   end
 
 
