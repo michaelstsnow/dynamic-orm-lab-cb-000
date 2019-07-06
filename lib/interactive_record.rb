@@ -39,7 +39,7 @@ class InteractiveRecord
       columns << col["name"]
     end
     binding.pry
-    columns.join[", "]
+    columns.compact
 
   end
 
