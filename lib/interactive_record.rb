@@ -30,7 +30,6 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    binding.pry
     table_name=self.table_name_for_insert
     DB[:conn].results_as_hash = true
     sql = "PRAGMA table_info(#{table_name});"
