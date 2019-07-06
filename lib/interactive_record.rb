@@ -34,9 +34,8 @@ class InteractiveRecord
   end
 
   def values_for_insert
-    column_names=self.col_names_for_insert.split(", ")
     values=[]
-    for column_names.each do |col|
+    self.class.column_names.each do |col_name|
       values << self.send("#{col}").to_s unless send(col_name).nil?
     end
     values.join(", ")
