@@ -34,7 +34,6 @@ class InteractiveRecord
   end
 
   def values_for_insert
-    binding.pry
      column_names=self.col_names_for_insert.split(", ")
      values=[]
      for column_names.each do |col|
