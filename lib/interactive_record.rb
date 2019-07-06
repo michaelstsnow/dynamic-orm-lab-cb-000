@@ -46,5 +46,5 @@ class InteractiveRecord
 
   def self.find_by
   end
-  
+
 end
