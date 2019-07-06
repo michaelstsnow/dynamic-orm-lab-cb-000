@@ -39,6 +39,7 @@ class InteractiveRecord
     for column_names.each do |col|
       values << self['#{col}']
     end
+    values.join(", ")
   end
 
   def save
