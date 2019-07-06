@@ -37,7 +37,7 @@ class InteractiveRecord
     column_names=self.col_names_for_insert
     values=[]
     for column_names.each do |col|
-      self['#{col}']
+      values << self['#{col}']
     end
   end
 
