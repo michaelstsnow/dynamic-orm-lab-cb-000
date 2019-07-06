@@ -25,8 +25,6 @@ class InteractiveRecord
     end
   end
 
-
-
   def table_name_for_insert
   end
 
@@ -39,7 +37,6 @@ class InteractiveRecord
 
   def save
   end
-
 
   def self.find_by_name
   end
