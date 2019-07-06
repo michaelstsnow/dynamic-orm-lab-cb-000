@@ -35,7 +35,7 @@ class InteractiveRecord
     sql = "PRAGMA index_info('#{table_name}')"
     table_info=DB[:conn].execute(sql)
     columns=[]
-    table_info.each do ||
+    table_info.each do |col|
     end
   end
 
