@@ -8,15 +8,15 @@ class InteractiveRecord
   end
 
   def self.column_names
+    DB[:conn].results_as_hash = true
 
-    sql = "pragma table_info('#{table_name}')"
-
+    sql= "PRAGMA table_info('#{table_name}');"
+    columns=[]
     table_info = DB[:conn].execute(sql)
-    column_names = []
-    table_info.each do |row|
-      column_names << row["name"]
+    table_info.each do  |col|
+      columns << col["name"]
     end
-    column_names.compact
+    columns.compact
   end
 
   def initialize(attributes={})
