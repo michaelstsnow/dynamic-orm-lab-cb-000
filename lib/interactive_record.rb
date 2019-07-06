@@ -26,6 +26,7 @@ class InteractiveRecord
   end
 
   def table_name_for_insert
+    self.class.to_s.pluralize
   end
 
   def col_names_for_insert
