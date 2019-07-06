@@ -30,7 +30,7 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    binding.pry 
+    binding.pry
     table_name=self.table_name_for_insert
     DB[:conn].results_as_hash = true
     sql = "PRAGMA index_info('#{table_name}')"
@@ -39,7 +39,6 @@ class InteractiveRecord
     table_info.each do |col|
       columns << col["name"]
     end
-    binding.pry
   end
 
 
