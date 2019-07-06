@@ -31,7 +31,8 @@ class InteractiveRecord
 
   def col_names_for_insert
     table_name=self.table_name_for_insert
-    
+
+    sql = 'PRAGMA index-info(#{table_name})'
   end
 
 
