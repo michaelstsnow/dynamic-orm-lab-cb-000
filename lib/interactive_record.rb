@@ -30,16 +30,7 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    table_name=self.table_name_for_insert
-    DB[:conn].results_as_hash = true
-    sql = "PRAGMA table_info(#{table_name});"
-    table_info=DB[:conn].execute(sql)
-    columns=[]
-    table_info.each do |col|
-      columns << col["name"]
-    end
-    columns.compact
-
+    self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end
 
 
