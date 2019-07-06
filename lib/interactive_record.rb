@@ -35,11 +35,11 @@ class InteractiveRecord
 
   def values_for_insert
     binding.pry
-     column_names=self.col_names_for_insert.split(", ")
-     values=[]
-     for column_names.each do |col|
+     #column_names=self.col_names_for_insert.split(", ")
+     #values=[]
+     #for column_names.each do |col|
       #values << self.send("#{col}").to_s
-     end
+     #end
      #values.join(", ")
   end
 
