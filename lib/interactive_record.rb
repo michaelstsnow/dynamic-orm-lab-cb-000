@@ -38,7 +38,7 @@ class InteractiveRecord
     self.class.column_names.each do |col|
       values << self.send("#{col}").to_s unless send(col).nil?
     end
-    values.join(", ")
+    values
   end
 
   def save
